@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://globalstudiomedia.com
+
+# Sitemaps
+Sitemap: https://globalstudiomedia.com/sitemap.xml
