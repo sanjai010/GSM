@@ -25,19 +25,23 @@ import {
 export default function ServicesPage() {
   return (
 
-    
+
     <div className={styles.container}>
-        <section className={styles.hero}>
-  <div className={styles.heroContent}>
-    <h1 className={styles.heroTitle}>Our Services</h1>
-    <p className={styles.heroSubtitle}>
-      We build digital experiences that deliver impact — from web to content and design.
-    </p>
-  </div>
-  <div className={styles.heroImage}>
-    <Image src="/images/services-hero.jpg" alt="Our Services" />
-  </div>
-</section>
+      <section className={styles.hero}>
+        <div className={styles.heroContent}>
+          <h1 className={styles.heroTitle}>Our Services</h1>
+          <p className={styles.heroSubtitle}>
+            We build digital experiences that deliver impact — from web to content and design.
+          </p>
+        </div>
+        <div className={styles.heroImage}>
+          <Image src="/images/services-hero.jpg" alt="Our Services"
+            width={1200}      // <-- original image width
+            height={600}      // <-- original image height
+            style={{ width: '100%', height: 'auto' }} // for responsiveness
+          />
+        </div>
+      </section>
 
       {/* Web Development Section */}
       <section className={styles.serviceCard}>
@@ -71,11 +75,12 @@ export default function ServicesPage() {
           </ul>
         </div>
         <div className={styles.right}>
-  <div className={styles.rightSticky}>
-    <Image src="/images/web.jpg" alt="Web Development" className={styles.rightImg} />
-  </div>
-</div>
+          <div className={styles.rightSticky}>
+            <Image src="/images/web.jpg" alt="Web Development" className={styles.rightImg} width={500} height={350} />
+          </div>
+        </div>
       </section>
+
 
       {/* Content Marketing Section */}
       <section className={styles.serviceCard}>
@@ -109,10 +114,10 @@ export default function ServicesPage() {
           </ul>
         </div>
         <div className={styles.right}>
-  <div className={styles.rightSticky}>
-    <Image src="/images/content.jpg" alt="Content Marketing" className={styles.rightImg} />
-  </div>
-</div>
+          <div className={styles.rightSticky}>
+            <Image src="/images/content.jpg" alt="Content Marketing" className={styles.rightImg}width={500} height={350} />
+          </div>
+        </div>
       </section>
 
       {/* Graphic Designing Section */}
@@ -147,10 +152,12 @@ export default function ServicesPage() {
           </ul>
         </div>
         <div className={styles.right}>
-  <div className={styles.rightSticky}>
-    <Image src="/images/graphic.jpg" alt="Graphic Design" className={styles.rightImg} />
-  </div>
-</div>
+          <div className={styles.rightSticky}>
+            <Image src="/images/graphic.jpg" alt="Graphic Design"
+              width={500}
+              height={350} className={styles.rightImg} />
+          </div>
+        </div>
       </section>
     </div>
   )
