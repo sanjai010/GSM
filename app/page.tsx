@@ -1,9 +1,9 @@
 'use client'
 
-import React, { useEffect ,useState  } from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
-import TestimonialsCarousel from '@/components/TestimonialsCarousel'
-import CalendlyEmbed from '@/components/CalendlyEmbed'
+import TestimonialsCarousel from '@/app/components/TestimonialsCarousel'
+import CalendlyEmbed from '@/app/components/CalendlyEmbed'
 
 
 export default function Home() {
@@ -48,7 +48,7 @@ export default function Home() {
     gradients.forEach((el) => {
       gradientObserver.observe(el)
     })
-    
+
   }, [])
 
   return (
@@ -83,16 +83,16 @@ export default function Home() {
             full-scale brand strategies, we partner with businesses to turn bold ideas into impactful results.
           </p>
           <a
-  href="https://wa.me/7559974470?text=Hi%20Global%20Studio%20Media%2C%20I%27m%20interested%20in%20your%20services%20and%20would%20like%20to%20talk."
-  target="_blank"
-  rel="noopener noreferrer"
-  style={{ textDecoration: 'none' }}
->
-  <button className="animated-button">
-    <span>Let&rsquo;s Talk?</span>
-    <span></span>
-  </button>
-</a>
+            href="https://wa.me/7559974470?text=Hi%20Global%20Studio%20Media%2C%20I%27m%20interested%20in%20your%20services%20and%20would%20like%20to%20talk."
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: 'none' }}
+          >
+            <button className="animated-button">
+              <span>Let&rsquo;s Talk?</span>
+              <span></span>
+            </button>
+          </a>
         </div>
       </section>
 
@@ -212,76 +212,76 @@ export default function Home() {
 
       {/* FAQ Section */}
       <section className="faq-section">
-  <h1 className="faq-title">Is this what you want to ask?</h1>
-  {[
-    {
-      q: 'What services does Global Studio Media offer?',
-      a: 'We provide end-to-end creative and digital solutions — including social media management, content creation, branding, website design & development, and full-scale digital marketing strategies.'
-    },
-    {
-      q: 'How long does it take to build a website?',
-      a: 'Timelines depend on the complexity and scope, but most websites are completed within 2 to 6 weeks.'
-    },
-    {
-      q: 'Can you manage all our social media platforms?',
-      a: 'Yes! We handle everything from content planning to posting and analytics — across Instagram, Facebook, LinkedIn, and more.'
-    },
-    {
-      q: 'What makes Global Studio Media different from other companies?',
-      a: 'We blend creative vision with digital strategy. Our small team gives personalized attention and bold execution without fluff.'
-    },
-    {
-      q: 'How do we get started working with you?',
-      a: 'Simple — drop us a message via contact form, WhatsApp, or email. We’ll schedule a call and tailor a plan for your brand.'
-    }
-  ].map((faq, index) => (
-    <div className={`faq ${openFAQ === index ? 'open' : ''}`} key={index}>
-      <div className="faq-question" onClick={() => setOpenFAQ(openFAQ === index ? null : index)}>
-        <span>{faq.q}</span>
-        <i className="fas fa-chevron-down arrow-icon"></i>
-      </div>
-      <div className="faq-answer">
-        <p>{faq.a}</p>
-      </div>
-    </div>
-  ))}
-</section>
+        <h1 className="faq-title">Is this what you want to ask?</h1>
+        {[
+          {
+            q: 'What services does Global Studio Media offer?',
+            a: 'We provide end-to-end creative and digital solutions — including social media management, content creation, branding, website design & development, and full-scale digital marketing strategies.'
+          },
+          {
+            q: 'How long does it take to build a website?',
+            a: 'Timelines depend on the complexity and scope, but most websites are completed within 2 to 6 weeks.'
+          },
+          {
+            q: 'Can you manage all our social media platforms?',
+            a: 'Yes! We handle everything from content planning to posting and analytics — across Instagram, Facebook, LinkedIn, and more.'
+          },
+          {
+            q: 'What makes Global Studio Media different from other companies?',
+            a: 'We blend creative vision with digital strategy. Our small team gives personalized attention and bold execution without fluff.'
+          },
+          {
+            q: 'How do we get started working with you?',
+            a: 'Simple — drop us a message via contact form, WhatsApp, or email. We’ll schedule a call and tailor a plan for your brand.'
+          }
+        ].map((faq, index) => (
+          <div className={`faq ${openFAQ === index ? 'open' : ''}`} key={index}>
+            <div className="faq-question" onClick={() => setOpenFAQ(openFAQ === index ? null : index)}>
+              <span>{faq.q}</span>
+              <i className="fas fa-chevron-down arrow-icon"></i>
+            </div>
+            <div className="faq-answer">
+              <p>{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </section>
 
-<TestimonialsCarousel />
-<CalendlyEmbed />
+      <TestimonialsCarousel />
+      <CalendlyEmbed />
 
 
 
 
       {/* Book a Call Section */}
- <section className="footer-branding">
-  <div className="footer-center">
-    <h1 className="brand-logo">GLOBAL STUDIO MEDIA</h1>
-    <p className="brand-sub">CONTENT · CODE · DESIGN</p>
-  </div>
+      <section className="footer-branding">
+        <div className="footer-center">
+          <h1 className="brand-logo">GLOBAL STUDIO MEDIA</h1>
+          <p className="brand-sub">CONTENT · CODE · DESIGN</p>
+        </div>
 
-  <div className="footer-bottom-row">
-    <div className="footer-contact">
-      <p>CONTACT</p>
-      <a href="mailto:contact@globalstudiomedia.com">contact@globalstudiomedia.com</a>
-    </div>
+        <div className="footer-bottom-row">
+          <div className="footer-contact">
+            <p>CONTACT</p>
+            <a href="mailto:contact@globalstudiomedia.com">contact@globalstudiomedia.com</a>
+          </div>
 
-    <div className="footer-socials">
-      <p>SOCIALS</p>
-      <div className="icons">
-        <a href="https://www.instagram.com/globalstudiomedia/" target="_blank" rel="noopener noreferrer">
-          <i className="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/globalstudio-media-1a8a1a370/" target="_blank" rel="noopener noreferrer">
-          <i className="fab fa-linkedin"></i>
-        </a>
-        <a href="https://www.instagram.com/globalstudiomedia/" target="_blank" rel="noopener noreferrer">
-          <i className="fab fa-facebook"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+          <div className="footer-socials">
+            <p>SOCIALS</p>
+            <div className="icons">
+              <a href="https://www.instagram.com/globalstudiomedia/" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/globalstudio-media-1a8a1a370/" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-linkedin"></i>
+              </a>
+              <a href="https://www.instagram.com/globalstudiomedia/" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-facebook"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
 
     </>

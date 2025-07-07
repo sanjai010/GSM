@@ -1,4 +1,5 @@
 // app/layout.tsx
+
 import '../styles/globals.css'
 import { Inter } from 'next/font/google'
 import Script from 'next/script'
@@ -113,6 +114,7 @@ export default function RootLayout({
           </>
         )}
       </head>
+    
       <body className={inter.className} suppressHydrationWarning={true}>
         {children}
 

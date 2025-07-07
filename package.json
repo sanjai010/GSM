@@ -11,6 +11,8 @@
   "dependencies": {
     "git": "^0.1.5",
     "keen-slider": "^6.8.6",
+    "motion": "^12.23.0",
+    "motion-plus": "^1.4.1",
     "next": "15.3.4",
     "next-sitemap": "^4.2.3",
     "react": "^19.0.0",
