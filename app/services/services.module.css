@@ -6,22 +6,14 @@
   flex-direction: column;
   gap: 100px;
 }
-/* services.module.css */
---------------------
+
 .container1 {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   width: 100%;
-  max-width: 420px;
-  text-align: left;
   visibility: hidden;
 }
 
-.split-word {
-  will-change: transform, opacity;
-}
-------------------------------
 .serviceCard {
   display: flex;
   flex-wrap: wrap;
@@ -29,9 +21,10 @@
   padding: 40px;
   border-radius: 25px;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+  gap: 20px;
 }
 
-.left {
+.left, .right {
   flex: 1;
   min-width: 300px;
   padding: 20px;
@@ -39,8 +32,6 @@
 }
 
 .right {
-  flex: 1;
-  min-width: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,61 +45,11 @@
   border-radius: 20px;
 }
 
-.heading {
-  font-size: 2.2rem;
-  color: white;
-  margin-bottom: 12px;
-}
-
-.description {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #ccc;
-}
-
 .highlight {
   font-size: 1.3rem;
   margin: 20px 0;
   color: #fff;
   font-weight: 500;
-}
-
-.features {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-.feature {
-  display: flex;
-  align-items: flex-start;
-  gap: 15px;
-}
-
-.icon {
-  font-size: 1.3rem;
-  color: silver;
-  flex-shrink: 0;
-  margin-top: 4px;
-}
-
-.iconHeading {
-  color: silver;
-  font-size: 1.5rem;
-  margin-right: 10px;
-  vertical-align: middle;
-}
-
-.featureTitle {
-  margin: 0;
-  font-size: 1.1rem;
-  color: #fff;
-}
-
-.featureDesc {
-  margin: 5px 0 0;
-  font-size: 0.95rem;
-  color: #ccc;
 }
 
 .breakdown {
@@ -132,42 +73,45 @@
   margin-bottom: 5px;
 }
 
-@media (max-width: 768px) {
-  .serviceCard {
-    flex-direction: column;
-    padding: 30px 20px;
-  }
-
-  .rightImg {
-    max-width: 100%;
-  }
+.icon {
+  font-size: 1.3rem;
+  color: silver;
+  margin-right: 10px;
 }
 
+.iconHeading {
+  color: silver;
+  font-size: 1.5rem;
+  margin-right: 10px;
+  vertical-align: middle;
+}
 
+/* Hero Section */
 .hero {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 40px;
   padding: 80px 20px 60px;
   max-width: 1300px;
   margin: auto;
-  flex-wrap: wrap;
 }
 
 .heroContent {
   flex: 1;
-  min-width: 300px;
+  min-width: 280px;
 }
 
 .heroTitle {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 800;
   color: white;
   margin-bottom: 15px;
 }
 
-.heroSubtitle {
+.heroSubtitle,
+.h1 {
   font-size: 1.2rem;
   color: #ccc;
   line-height: 1.6;
@@ -176,7 +120,7 @@
 
 .heroImage {
   flex: 1;
-  min-width: 300px;
+  min-width: 280px;
   text-align: center;
 }
 
@@ -187,5 +131,64 @@
   object-fit: cover;
 }
 
+/* Responsive tweaks */
+@media (max-width: 1024px) {
+  .heroTitle {
+    font-size: 2.2rem;
+  }
 
+  .highlight {
+    font-size: 1.1rem;
+  }
+}
 
+@media (max-width: 768px) {
+  .container {
+    padding: 40px 15px;
+    gap: 60px;
+  }
+
+  .serviceCard {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .rightImg {
+    max-width: 100%;
+  }
+
+  .hero {
+    padding: 60px 15px 40px;
+    gap: 30px;
+  }
+
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .highlight {
+    font-size: 1rem;
+  }
+
+  .breakdown li {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 1.8rem;
+  }
+
+  .highlight {
+    font-size: 0.95rem;
+  }
+
+  .iconHeading {
+    font-size: 1.2rem;
+  }
+
+  .rightImg {
+    aspect-ratio: 16 / 9;
+  }
+}
